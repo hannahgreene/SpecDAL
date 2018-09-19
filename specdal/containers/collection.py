@@ -262,7 +262,7 @@ class Collection(object):
 	'''
         for spectrum in self.spectra:
             spectrum.interpolate(spacing, method)
-    def stitch(self, method='max'):
+    def stitch(self, method='max') :#default max stitch
         '''
 	'''
         for spectrum in self.spectra:

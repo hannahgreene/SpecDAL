@@ -86,7 +86,7 @@ class Spectrum(object):
         '''
         self.measurement = op.interpolate(self.measurement, spacing, method)
         self.interpolated = True
-    def stitch(self, method='mean'):
+    def stitch(self, method):#any stitch method
         '''
         '''
         self.measurement = op.stitch(self.measurement, method)
