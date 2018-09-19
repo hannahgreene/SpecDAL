@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 
-def _stitch_region(series,wnum,idx,method='max'):
+def _stitch_region(series,wnum,idx,method):
     #the radiances to the left of the negative step
     left_idx = wnum.loc[:idx-1][wnum.loc[:idx-1]>wnum[idx]].index
     #the radiances to the right of the negative step
@@ -32,7 +32,7 @@ def _stitch_region(series,wnum,idx,method='max'):
 
 ################################################################################
 # stitch: resolve overlaps in wavelengths
-def stitch(series, method='max'):
+def stitch(series, method):
     """
     Stitch the regions with overlapping wavelength
     
